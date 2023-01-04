@@ -1,0 +1,9 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 13,
+  "editor.fontFamily": "Fira Code",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+}

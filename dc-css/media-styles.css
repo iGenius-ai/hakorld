@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/* CSS Document */
+/* BEGIN TAGS */
+
+* html {	
+	height: 100%;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+/*	background-image: url(/media.defcon.org-images/background.webp); */
+	background-image: url(/media.defcon.org-images/background.gif);
+	background-size: 215px 120px;
+	background-position: top left;
+	background-repeat: repeat;
+	font: .95em "Courier New", monospace;
+/*	font-size: 1em;; */
+	color: #bbbbbb /*#aaaa99*/;
+	line-height: 1.2em;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	}
+
+
+a {
+	color: #66CCFF/*#5588CC*/;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	text-shadow: black .7px .7px .7px;
+}
+
+
+a:hover {
+	color: #3399FF;
+}
+
+img {
+	border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.3em;
+	letter-spacing: -.02em;
+	color: #dddddd;
+	padding: 0;
+	margin: 0 0 15px 25px;
+	z-index: 0;
+	text-shadow: black 1.5px 1.5px 1.5px;
+}
+
+h1 {
+	font-size: 2.5em;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 1.6em;
+	font-weight: 800;
+}
+
+h3 {
+	font-size: 1.55em;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+h5 {
+	font-size: .95em;
+	
+}
+
+h6 {
+	font-size: .8em;
+}
+
+strong {
+	color: #bbbbbb;
+	text-shadow: black .7px .7px .7px;
+}
+
+/* END TAGS */
+
+/* BEGIN CLASS SELECTORS */
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	left: 7px;
+	padding: 0 15px 0 0;
+	width: 100%;
+	max-width: 1280px;
+	min-width: 200px;
+	height: 100%;
+	height: auto;
+	clear: both;
+}
+
+/* END CLASS SELECTORS */
+/* BEGIN ID SELECTORS */
+
+#header {
+	background: url(/media.defcon.org-images/media-header.webp) top center no-repeat;
+	height: 363px;
+	padding: 0;
+	margin: 0 auto -275px;
+	z-index: 10;
+}
+
+#header .mastHead {
+	position:relative;
+	width: 100%;
+	max-width: 240px;
+	min-width: 150px;
+	height: 100%;
+	max-height: 51px;
+	min-height: 31px;
+	border: none;
+	padding: 0 40px 0;
+	margin: 7px 0 0 0;
+	z-index: 30;
+	float: right;
+}
+
+#pageNavCenterT {
+	background: url(/media.defcon.org-images/55blue.png);
+	width: 96.5%;
+	min-width: 200px;
+	max-width: 1280px;
+	z-index: 1000;
+	height: 55px;
+	text-shadow: black .3px .3px .3px;
+	margin: 0 0 5px 5px;
+	z-index: 10;
+}
+
+#pageNavCenterT h1 {
+	font-family: "Courier New", monospace;
+	text-align: center;
+	text-weight: bold;
+	margin: 0 0 -8px 0;
+	padding: 0 20px 0 18px;
+	color: #CCCCCC;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-radius-top-right: 10px;
+	-webkit-border-radius-top-left: 10px;
+}
+
+#wrapper {
+	clear: both;
+	padding: 0 0 0 0;
+	z-index: 1000;
+} 
+
+#content {
+	background: url(/media.defcon.org-images/content-bg-shell45.webp) right top repeat-y;
+	float: left;
+	width: 96.5%;
+	min-width: 200px;
+	max-width: 1280px;
+	min-height: 400px;
+	margin: 0 0 0 5px;
+	clear: both;
+	padding: 0 0 25px 0;
+	z-index: 5;
+}
+
+#content p { 
+    position: relative;
+	margin: 10px 0 5px 15px;
+	padding: 0 15px 10px 10px;
+	z-index: 2;
+	width: 100%;
+	max-width: 60%;
+}
+
+#content h4 {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+#footer {
+	clear: both;
+	position: relative;
+	margin: -50px auto;
+	height: 100%;
+	min-height: 50px;
+	text-align: center;
+	font-size: .8em;
+	z-index: 15;
+}
+
+/* -----Add----- */
+
+#content hr {
+	color: #333366;
+   	background-color: #333366; 
+   	border-color: #333366;
+	border-style: none;
+	height: 2px;
+	text-align: left;
+	margin: 0 20px 10px 0;
+}
+
+table {
+	width: 100%;
+	min-width: 180px;
+	max-width: 1280px;
+	margin: 15px auto;
+	vertical-align:top;
+	border-collapse: collapse;
+}
+
+table tr td {
+	padding: 10px 20px;
+	font-size: .85em;
+	text-align: left;
+}
+
+table th {
+	font-size: .9em;
+	text-shadow: black 1px 1px 1px;
+	text-align: left;
+	padding: 0 10px;
+}
+
+table tr:nth-child(2n+3) {
+	background: url(/media.defcon.org-images/10white.png);
+}
+
+.clear {
+	clear: both;
+}
+
+h1.breadcrumb {
+	font-family: "Courier New", monospace;
+	font-size: 1em;
+	padding-left: 0;
+	margin-left: 0;
+	}
+
+a.homeLink {
+	font-family: "Courier New", monospace;
+	font-size: 1em;
+}
+
+}

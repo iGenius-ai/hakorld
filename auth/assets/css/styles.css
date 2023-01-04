@@ -1,0 +1,111 @@
+body {
+  background-color: black;
+  color: silver;
+  font-family: Arial;
+}
+
+legend {
+  color: silver;
+}
+
+.text-right{
+text-align: right;
+}
+
+.cfp-image{
+padding-top:87px;
+}
+
+.form-signin {
+max-width: 330px;
+padding: 15px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+margin-bottom: 10px;
+}
+.form-signin .checkbox {
+font-weight: normal;
+}
+.form-signin .form-control {
+position: relative;
+height: auto;
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+padding: 10px;
+font-size: 16px;
+}
+.form-signin .form-control:focus {
+z-index: 2;
+}
+.form-signin input[type="email"] {
+margin-bottom: -1px;
+border-bottom-right-radius: 0;
+border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+margin-bottom: 10px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+}
+
+
+div#header {
+  background: url("../../../assets/images/sidebar-img.jpg") no-repeat scroll 0 0 black;
+  background-size: contain;
+  height: 170px;
+  margin-bottom: 2em;
+  overflow: hidden;
+  padding: 10px 10px 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+div#header h1 {
+  font-weight: 700;
+}
+
+div#errMessage{
+width:600px;
+height:200px;
+border:2px solid #900;
+margin:auto;
+color:#990000;
+text-align:center;	
+}
+
+.proposalText{
+width:500px;
+height:200px;	
+}
+
+.navFOOT,.copyright{
+width:600px;
+margin:auto;	
+}
+
+.container{
+min-height:400px;
+padding-bottom:100px;	
+}
+
+.suggested_keywords{
+  width:500px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  height:130px;
+}
+
+form input, form textarea, form select, form .checkbox{
+color:#000;
+}
+/* blue update */
+a, a:hover, a:focus, .alert-info {color:#5bc2e7;}
+.btn-primary, 
+.btn-primary.disabled, .btn-primary.disabled.active, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled:focus, .btn-primary.disabled:hover, .btn-primary[disabled], .btn-primary.active[disabled], .btn-primary.focus[disabled], .btn-primary[disabled]:active, .btn-primary[disabled]:focus, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary.active, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:hover { background-color: #1a658f; border:1px solid #5bc2e7;}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary,
+.btn-primary:hover {background-color:#5bc2e7; border:1px solid #5bc2e7;}
+.form-control:focus {border-color:#5bc2e7; box-shadow: none;}
+.form-control {border-color:#5bc2e7; box-shadow: none;}
