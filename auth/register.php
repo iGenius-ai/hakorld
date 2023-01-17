@@ -1,3 +1,9 @@
+<?php 
+	include("../path.php");
+	include(ROOT_PATH . "/app/database/db.php");
+	include(ROOT_PATH . "/app/controllers/users.php"); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,56 +38,56 @@
 						</div>
 					</noscript>
 
-					<form action="/register" id="newaccount" method="post" class="form-horizontal">
+					<form action="register.php" method="POST" class="form-horizontal" enctype="multipart/form-data">
 
 						<div class='fieldset form-horizontal'>
 							<legend>Create Account</legend>
 						</div>
 	
 						<div class="form-group">
-							<label for="email" class="col-sm-3 control-label">Email*:</label>
+							<label class="col-sm-3 control-label">Email*:</label>
 							<div class="col-sm-9">
-								<input type="email" class="form-control" id="email" name="email" />
+								<input type="email" class="form-control" id="email" value="<?php echo $email; ?>" name="email" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
 	
 						<div class="form-group">
-							<label for="email_again" class="col-sm-3 control-label">Confirm Email*:</label>
+							<label class="col-sm-3 control-label">Confirm Email*:</label>
 							<div class="col-sm-9">
-								<input type="email" class="form-control" id="email_login" name="email_again" />
+								<input type="email" class="form-control" id="email_login" value="<?php echo $emailagain; ?>" name="emailagain" />
 								<p class="help-block">Confirm your email</p>
 							</div>
 						</div>
 	
 						<div class="form-group">
-							<label for="password" class="col-sm-3 control-label">Password*:</label>
+							<label class="col-sm-3 control-label">Password*:</label>
 							<div class="col-sm-9">
-								<input type="password" class="form-control" id="password" name="password" />
+								<input type="password" class="form-control" id="password" value="<?php echo $password; ?>" name="password" />
 								<p class="help-block">Required. Password must contain at least 8 characters consisting of upper/lower case letters and numbers or the following characters: !,@,*,$,#,&,%</p>
 							</div>
 						</div>
 	
 						<div class="form-group">
-							<label for="password_again" class="col-sm-3 control-label">Confirm Password*:</label>
+							<label class="col-sm-3 control-label">Confirm Password*:</label>
 							<div class="col-sm-9">
-								<input type="password" class="form-control" id="password_again" name="password_again" />
+								<input type="password" class="form-control" id="password_again" value="<?php echo $passwordagain; ?>" name="passwordagain" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="nameFirst" class="col-sm-3 control-label">First Name*:</label>
+							<label class="col-sm-3 control-label">First Name*:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="nameFirst" />
+								<input type="text" class="form-control" value="<?php echo $firstname; ?>" name="firstname" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
   
 						<div class="form-group">
-							<label for="nameLast" class="col-sm-3 control-label">Last Name*:</label>
+							<label class="col-sm-3 control-label">Last Name*:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="nameLast" />
+								<input type="text" class="form-control" value="<?php echo $lastname; ?>" name="lastname" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
@@ -89,31 +95,28 @@
 						<div class="form-group">
 							<label for="phone" class="col-sm-3 control-label">Phone*:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="phone" />
+								<input type="text" class="form-control" value="<?php echo $phone; ?>" name="phone" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
 	
 						<div class="form-group">
-							<label for="title" class="col-sm-3 control-label">Title:</label>
+							<label class="col-sm-3 control-label">Title:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="title" />
+								<input type="text" class="form-control" value="<?php echo $title; ?>" name="title" />
 							</div>
 						</div>
 	
 						<div class="form-group">
-							<label for="company" class="col-sm-3 control-label">Company:</label>
+							<label class="col-sm-3 control-label">Company:</label>
 							<div class="col-sm-9">
-								<input type="text" class="form-control" name="company" />
+								<input type="text" class="form-control" value="<?php echo $company; ?>" name="company" />
 							</div>
 						</div>
-	
-						<input type="hidden" name="token" value="a48dc1c3ac31d595f308df0539b20be7068defcf|1672834518" />
-						<input type="hidden" name="postsubmit" value="1" />
 	
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
-								<a href="#" id="submitBtn"  class="btn btn-large btn-primary">Create Account</a>
+								<button name="createAccount" class="btn btn-large btn-primary">Create Account</button>
 							</div>
 						</div>
 					</form>

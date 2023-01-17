@@ -45,7 +45,7 @@
 			<h2>Home</h2> 
 
 			<nav class="sixteen columns navHolder alpha">
-				<ul id="firstItem" class="nav"><li><a href="/index.html">Home</a></li></ul>
+				<ul id="firstItem" class="nav"><li><a href="index.html">Home</a></li></ul>
 				<ul id="secItem" class="nav"><li><a href="recent.html">Recent News</a></li></ul>
 				<ul id="thirdItem" class="nav">
 					<li class="multi"><a href="#">Archives &raquo;</a>

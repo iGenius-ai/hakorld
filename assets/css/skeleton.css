@@ -10,7 +10,7 @@
 .container .three.columns{width:180px;}
 .container .four.columns{width:275px;}
 .container .five.columns{width:280px;}
-.container .six.columns{width:340px;}
+.container .six.columns{width:380px;}
 .container .seven.columns{width:600px;}
 .container .eight.columns{width:460px;}
 .container .nine.columns{width:740px;}
@@ -20,7 +20,7 @@
 .container .thirteen.columns{width:760px;}
 .container .fourteen.columns{width:820px;}
 .container .fifteen.columns{width:880px;}
-.container .sixteen.columns{width:1160px; margin:0 auto;}
+.container .sixteen.columns{width:1200px; margin:0 auto;}
 .container .one-third.column{width:300px;}
 .container .two-thirds.column{width:620px;}
 .container .offset-by-one{padding-left:75px;}

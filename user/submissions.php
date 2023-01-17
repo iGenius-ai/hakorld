@@ -1,3 +1,14 @@
+<?php 
+	include("../path.php");
+	include(ROOT_PATH . "/app/database/db.php");
+	include(ROOT_PATH . "/app/controllers/users.php"); 
+	include(ROOT_PATH . "/app/controllers/submissions.php"); 
+
+  if (!$_SESSION['firstname']) {
+    header('location: ' . BASE_URL . 'auth/signin.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,18 +19,24 @@
 	  <meta property="og:description" content="">
 	  <meta property="og:image" content="https://www.blackhat.com/images/page-graphics/metatag/logo-2018.png">
 
-    <title>Black Hat CFP</title>
+    <title>Hakorld - Submissions</title>
 
     <link href="../auth/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../auth/assets/css/styles.css" rel="stylesheet">
-         
+
+    <style>
+      body > * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+
   </head>
   <body>
     <div class="container">
       <div class="row" id="header-container">
         <div id="header" class="span12 asia-logo">
           <div class="pull-right text-right" id="user-info">
-            Welcome, Charles Emmanuel
+            Welcome, <?php echo $_SESSION['lastname'] . " " . $_SESSION['firstname']; ?>
             <div class="cfp-image">
               <img src="../assets/images/cfp.png">
             </div>
@@ -32,13 +49,13 @@
 	        <div class="nav">
 		        <ul class="nav nav-tabs nav-stacked">
 		          <li class="active">
-		            <a href="https://asia-briefings-cfp.blackhat.com/home" accesskey="s"><u>S</u>ubmissions</a>
+		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
 		          <li>
-		            <a href="https://asia-briefings-cfp.blackhat.com/account" accesskey="m"><u>M</u>y account</a>
+		            <a href="account.php" accesskey="m"><u>M</u>y account</a>
 		          </li>
 		          <li class="inactive">
-		            <a href="https://asia-briefings-cfp.blackhat.com/logout" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
+		            <a href="../logout.php" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
 		          </li>
 		        </ul>
 	        </div>
@@ -47,34 +64,35 @@
         <div class="col-lg-10" id="content">
           <div class="row">
             <div class="col-lg-8">
-              <form id="newsubmission" method="post" action="https://asia-briefings-cfp.blackhat.com/newsubmission">
-                <a href="https://asia-briefings-cfp.blackhat.com/home#" id="submitBtn" class="btn btn-large btn-primary">Submit a new proposal</a>
-              </form>
+              <a href="submit.php" class="btn btn-large btn-primary">Submit a new proposal</a>
 
               <table class="table">
                 <thead>
                   <tr>
+                    <th style="width: 10px;">#</th>
                     <th>Title</th>
-                    <th>Status</th>
-                    <th></th>
+                    <th>Document</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Please edit to add a title</td>
-                    <td>New</td>
-                    <td>
-                      <div style="float:right;">
-                        <form action="https://asia-briefings-cfp.blackhat.com/deletesubmission" method="POST">
-                          <input type="submit" name="deletesubmission" class="btn delete-submission btn-large btn-danger" value="Delete">
-                        </form>
-                      </div>
-                      <div style="float:right;">
-                        <a class="btn btn-large btn-primary" href="https://asia-briefings-cfp.blackhat.com/submission/ipETpgdpth5ZObmgx2tf">Edit</a> &nbsp; 
-                      </div>
-
-                    </td>
-                  </tr>
+                  <?php foreach ($submissions as $key => $submission): ?>
+                    <?php if($submission['user_id'] == $_SESSION['id']): ?>
+                      <tr>
+                        <td><?php echo $key + 1; ?></td>
+                        <td><?php echo $submission["title"]; ?></td>
+                        <td><?php echo $submission["fileupload"]; ?></td>
+                        <td>
+                          <a href="edit.php?id=<?php echo $submission["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
+                          <a href="edit.php?delete_id=<?php echo $submission['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                      </tr>
+                    <?php else: ?>
+                      <tr>
+                        <td colspan="3">No proposal record found.</td>
+                      </tr>
+                    <?php endif; ?>
+									<?php endforeach; ?>
                 </tbody>
               </table>
             </div>

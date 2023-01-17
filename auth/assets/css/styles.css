@@ -8,6 +8,10 @@ legend {
   color: silver;
 }
 
+textarea {
+  resize: none !important;
+}
+
 .text-right{
 text-align: right;
 }
