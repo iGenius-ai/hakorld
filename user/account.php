@@ -48,9 +48,20 @@
 		          <li>
 		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
+              <li>
+		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
+		          </li>
 		          <li class="active">
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
+							<?php if(!$_SESSION['admin']): ?>
+								<li>
+									<a href="#" accesskey="a"><u>R</u>eview Proposals</a>
+								</li>
+								<li>
+									<a href="#" accesskey="v"><u>V</u>iew Users</a>
+								</li>
+							<?php endif; ?>
 		          <li class="inactive">
 		            <a href="../logout.php" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
 		          </li>
@@ -59,7 +70,6 @@
         </div>
         
         <div class="col-lg-10" id="content">
-          <h5>To edit your details, please click on the <strong>My Account</strong> button first.</h4>
           <form action="account.php?id=<?php echo $user['id']; ?>" method="POST" class="form-horizontal" enctype="multipart/form-data">
 	          <div class="fieldset form-horizontal">
 		          <legend>My Account</legend>
@@ -131,14 +141,14 @@
       <div id="footer" class="col-sm-12">
         <hr>
         <div class="navFOOT">
-          <a href="https://www.blackhat.com/">home</a>/
-          <a href="http://blackhat.com/html/archives.html">archives</a>/
-          <a href="http://blackhat.com/html/about.html">about</a>/
-          <a href="http://blackhat.com/html/contact.html">contact</a>
+          <a href="https://www.blackhat.com/">Home</a>/
+          <a href="http://blackhat.com/html/archives.html">Archives</a>/
+          <a href="http://blackhat.com/html/about.html">About</a>/
+          <a href="http://blackhat.com/html/contact.html">Contact</a>
         </div>
         <div class="copyright">
           <p>
-            (2023 black hat ™) an Informa Tech company //
+            (2023 Hakorld™) an Informa Tech company //
             <a target="_blank" href="https://www.informatech.com/about-us">about informa tech</a>
           </p>
         </div>

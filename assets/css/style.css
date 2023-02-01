@@ -1,0 +1,196 @@
+h3 span {
+	color: white;
+}
+.meet-block {
+  display: block !important;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: .5rem;
+  place-items: center;
+}
+.meet-img {
+  width: 100px;
+  max-height: 120px;
+}
+.meet-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ration_oneregular', Helvetica, sans-serif;
+  width: 200px;
+  height: 200px;
+}
+.meet-title {
+  font-size: 12px;
+	font-weight: 500;
+	letter-spacing: .5px;
+	line-height: 1.2em;
+}
+.meet-detail {
+  font-size: 10px;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+	letter-spacing: .3px;
+  line-height: 1.5em;
+}
+.coursefilter__course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  border: 2px solid #b0afc7;
+  padding: .4rem 1rem;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.one_ {color: #009999;}.two_ {color: #ff6c5f;}.three_ {color: #d2d900;}
+.four_ {color: #cc00cc;}.five_ {color: #339933;}.six_ {color: #f01a00;}.seven_ {color: #4d52de;}
+
+/* Form Style */
+.form-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+.form-flex .form-group, .form-flex .form-group .input-control {
+	width: 100%;
+	padding: .7rem .5rem;
+	margin-bottom: 0 !important;
+	font-family: 'ration_oneregular', Helvetica, sans-serif;
+}
+.form-flex .form-group .input-control {
+	font-size: 1.1rem;
+}
+.form-flex textarea {
+	resize: none;
+}
+.form-flex label {
+	font-family: 'ration_oneregular', Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: .5px;
+}
+.form-flex label > span {
+	color: #f01a00;
+}
+.form-flex .submitBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form-flex .submitBtn button {
+	margin: 0 auto;
+	background: #f01a00a8;
+	border-radius: 1px;
+	color: #fff;
+	border: 1px solid #f01a00a8;
+	padding: .6rem 1.2rem;
+	font-size: .9rem;
+	font-family: 'ration_oneregular', Helvetica, sans-serif;
+	font-weight: 500;
+	letter-spacing: .5px;
+	box-shadow: 0px 0px 8px #595353;
+	transition: all 0.2s ease-in-out;
+}
+.form-flex .submitBtn button:hover {
+	background: #f01a00;
+	border: 1px solid #f01a00;
+	transition: all 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.meet-item:nth-child(1) .coursefilter__course:hover {
+  background: #009999;
+  border-color: #009999;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(2) .coursefilter__course:hover {
+  background: #ff6c5f;
+  border-color: #ff6c5f;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(3) .coursefilter__course:hover {
+  background: #d2d900;
+  border-color: #d2d900;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(4) .coursefilter__course:hover {
+  background: #cc00cc;
+  border-color: #cc00cc;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(5) .coursefilter__course:hover {
+  background: #339933;
+  border-color: #339933;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(6) .coursefilter__course:hover {
+  background: #f01a00;
+  border-color: #f01a00;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item:nth-child(7) .coursefilter__course:hover {
+  background: #4d52de;
+  border-color: #4d52de;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.meet-item .coursefilter__course:hover * {
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+.meet-item .coursefilter__course:hover .meet-img {
+  width: 110px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .meet-item {
+    width: 150px;
+    height: 150px;
+  }
+  .coursefilter__course {
+    width: 150px;
+    height: 150px;
+  }
+  .meet-title {
+    font-size: 10px;
+  }
+  .meet-img {
+    width: 60px;
+    max-height: 80px;
+  }
+  .meet-detail {
+    font-size: 8px;
+    text-decoration: unset;
+  }
+  .meet-item .coursefilter__course:hover .meet-img {
+    width: 70px;
+    transition: all 0.2s ease-in-out;
+  }
+	.form-flex {
+		display: block;
+	}
+}

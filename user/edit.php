@@ -46,11 +46,14 @@
         <div class="col-lg-2">
 	        <div class="nav">
 		        <ul class="nav nav-tabs nav-stacked">
-		          <li class="active">
+		          <li>
 		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
+							<li>
+		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
+		          </li>
 		          <li>
-		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
+		            <a href="account.php?id=<?php echo $_SESSION['id']; ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
 		          <li class="inactive">
 		            <a href="../logout.php" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>

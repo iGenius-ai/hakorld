@@ -19,7 +19,7 @@
 	  <meta property="og:description" content="">
 	  <meta property="og:image" content="https://www.blackhat.com/images/page-graphics/metatag/logo-2018.png">
 
-    <title>Hakorld - Submissions</title>
+    <title>Hakorld - Courses</title>
 
     <link href="../auth/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../auth/assets/css/styles.css" rel="stylesheet">
@@ -38,7 +38,7 @@
           <div class="pull-right text-right" id="user-info">
             Welcome, <?php echo $_SESSION['lastname'] . " " . $_SESSION['firstname']; ?>
             <div class="cfp-image">
-              <img src="../assets/images/cfp.png">
+              <img src="../assets/images/cfp.png" alt="cfp-system">
             </div>
           </div>
         </div>
@@ -48,10 +48,10 @@
         <div class="col-lg-2">
 	        <div class="nav">
 		        <ul class="nav nav-tabs nav-stacked">
-		          <li class="active">
+		          <li>
 		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
-							<li>
+							<li class="active">
 		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
 		          </li>
 		          <li>
@@ -66,41 +66,31 @@
 
         <div class="col-lg-10" id="content">
           <div class="row">
-            <div class="col-lg-8">
-              <a href="submit.php" class="btn btn-large btn-primary">Submit a new proposal</a>
-
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 10px;">#</th>
-                    <th>Title</th>
-                    <th>Document</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ($submissions as $key => $submission): ?>
-                    <?php if($submission['user_id'] == $_SESSION['id']): ?>
-                      <tr>
-                        <td><?php echo $key + 1; ?></td>
-                        <td><?php echo $submission["title"]; ?></td>
-                        <td><?php echo $submission["fileupload"]; ?></td>
-                        <td>
-                          <a href="edit.php?id=<?php echo $submission["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
-                          <a href="edit.php?delete_id=<?php echo $submission['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                      </tr>
-                    <?php else: ?>
-                      <tr>
-                        <td colspan="3">No proposal record found.</td>
-                      </tr>
-                    <?php endif; ?>
-									<?php endforeach; ?>
-                </tbody>
-              </table>
-            </div>
-            <div class="col-lg-2">
-            </div>
+            <div class="col-lg-10">
+							<h3>Your Training Roadmap</h3>
+							<div class="col-lg-6 register-course">
+								<img src="../assets/images/undraw_mind_map_re_nlb6.svg" class="roadmap-img" alt="Roadmap Image">
+								<a href="#" class="btn btn-md btn-primary">Register for a course</a>
+							</div>
+							<div class="col-lg-4">
+								<div class="roadmap">
+									<h4><strong>Offensive Classes</strong></h4>
+									<p>
+										Hacking training for all levels: new to advanced, ideal for those preparing for certifications such as
+										CREST CCT (ICE), CREST CCT (ACE), CHECK (CTL), TIGER SST, as well as infrastructure/web application
+										penetration testers wishing to add to their existing skill set.
+									</p>
+								</div>
+								<div class="roadmap def">
+									<h4><strong>Defensive Classes</strong></h4>
+									<p>
+										Giving you the skills needed to get ahead and secure your business by design. We specialize in application
+										security (both secure coding and building security testing into your software development lifecycle) and
+										cloud security. Build security capability into your teams, enabling you to move fast and stay secure.
+									</p>
+								</div>
+							</div>
+						</div>
           </div>
         </div>
       </div>

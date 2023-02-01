@@ -52,6 +52,9 @@
 								<a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 							</li>
 							<li>
+		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
+		          </li>
+							<li>
 								<a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 							</li>
 							<li class="inactive">

@@ -13,14 +13,14 @@
 .container .six.columns{width:380px;}
 .container .seven.columns{width:600px;}
 .container .eight.columns{width:460px;}
-.container .nine.columns{width:740px;}
-.container .ten.columns{width:800px;}
+.container .nine.columns{width:710px;}
+.container .ten.columns{width:760px;}
 .container .eleven.columns{width:640px;}
 .container .twelve.columns{width:700px;}
 .container .thirteen.columns{width:760px;}
 .container .fourteen.columns{width:820px;}
 .container .fifteen.columns{width:880px;}
-.container .sixteen.columns{width:1200px; margin:0 auto;}
+.container .sixteen.columns{width:1160px; margin:0 auto;}
 .container .one-third.column{width:300px;}
 .container .two-thirds.column{width:620px;}
 .container .offset-by-one{padding-left:75px;}
@@ -81,7 +81,8 @@
 .container .offset-by-fourteen{padding-left:672px;}
 .container .offset-by-fifteen{padding-left:720px;}
 }
-@media only screen and (max-width:767px){.container{width:300px;}
+@media only screen and (max-width:767px){
+.container{width:350px;}
 .container .columns,
 .container .column{margin:0;}
 .container .one.column,
@@ -102,7 +103,7 @@
 .container .fifteen.columns,
 .container .sixteen.columns,
 .container .one-third.column,
-.container .two-thirds.column{width:300px;}
+.container .two-thirds.column{width:350px;}
 .container .offset-by-one,
 .container .offset-by-two,
 .container .offset-by-three,
@@ -118,7 +119,7 @@
 .container .offset-by-thirteen,
 .container .offset-by-fourteen,
 .container .offset-by-fifteen{padding-left:0;}
-.container .six.columns.main {width: 300px;}
+.container .six.columns.main {width: 350px;}
 }
 @media only screen and (min-width:480px) and (max-width:767px){.container{width:420px;}
 .container .columns,
@@ -142,6 +143,30 @@
 .container .sixteen.columns,
 .container .one-third.column,
 .container .two-thirds.column{width:420px;}
+}
+
+@media only screen and (min-width:360px) and (max-width:479px){.container{width:300px;}
+.container .columns,
+.container .column{margin:0;}
+.container .one.column,
+.container .one.columns,
+.container .two.columns,
+.container .three.columns,
+.container .four.columns,
+.container .five.columns,
+.container .six.columns,
+.container .seven.columns,
+.container .eight.columns,
+.container .nine.columns,
+.container .ten.columns,
+.container .eleven.columns,
+.container .twelve.columns,
+.container .thirteen.columns,
+.container .fourteen.columns,
+.container .fifteen.columns,
+.container .sixteen.columns,
+.container .one-third.column,
+.container .two-thirds.column{width:300px;}
 }
 
 .container:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;}

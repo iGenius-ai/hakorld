@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="assets/css/skeleton.css">
 	<link rel="stylesheet" href="assets/css/layout.css">
 	<link rel="stylesheet" href="assets/css/slider.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- Favicons -->
 	<link rel="icon" href="assets/images/favicon.ico" />
@@ -45,52 +46,52 @@
 			<h2>Home</h2> 
 
 			<nav class="sixteen columns navHolder alpha">
-				<ul id="firstItem" class="nav"><li><a href="index.html">Home</a></li></ul>
-				<ul id="secItem" class="nav"><li><a href="recent.html">Recent News</a></li></ul>
+				<ul id="firstItem" class="nav"><li><a href="index">Home</a></li></ul>
+				<ul id="secItem" class="nav"><li><a href="recent">Recent News</a></li></ul>
 				<ul id="thirdItem" class="nav">
 					<li class="multi"><a href="#">Archives &raquo;</a>
 						<ul class="subNav">
-							<li><a href="/html/links/dc-archives.html">File Download</a></li>
-							<li><a href="/html/links/dc-ctf.html">Tools Released</a></li>
-							<li><a href="/html/links/dc-tools.html">CTF Archive</a></li>
+							<li><a href="file_downloads">File Download</a></li>
+							<li><a href="tools">Tools Released</a></li>
+							<li><a href="ctf_archives">CTF Archive</a></li>
 						</ul>
 					</li>
 				</ul>
 				<ul id="fourthItem" class="nav"> 
 					<li class="multi"><a href="#">About &raquo;</a>
 						<ul class="subNav">
-							<li><a href="/html/links/dc-goon-hof.html">Genius Playground</a></li>
-							<li><a href="/html/links/dc-faq/dc-faq.html">FAQ</a></li>
-							<li><a href="/html/links/dc-contact.html">Contact</a></li>
+							<li><a href="#">Genius Playground</a></li>
+							<li><a href="faq">FAQ</a></li>
+							<li><a href="contact">Contact</a></li>
 						</ul>
 					</li>
 				</ul>
 				<ul id="fifthItem" class="nav">
 					<li class="multi"><a href="#">Community &raquo;</a>
 						<ul class="subNav">
-							<li><a href="https://discord.gg/DEFCON">Hakorld Discord</a></li>
-							<li><a href="https://defcongroups.org/">Hakorld Groups</a></li>
-							<li><a href="https://forum.defcon.org/">Hakorld Forums</a></li>
+							<li><a href="#">Hakorld Discord</a></li>
+							<li><a href="#">Hakorld Groups</a></li>
+							<li><a href="#">Hakorld Forums</a></li>
 						</ul>
 					</li>
 				</ul>
 				<ul id="sixthItem" class="nav">
 					<li class="multi"><a href="#">Resources &raquo;</a>
 						<ul class="subNav">
-							<li><a href="https://media.defcon.org/">Media Server</a></li>
-							<li><a href="/html/links/movie-list.html">Movie List</a></li>
-							<li><a href="/html/links/links-o-rama.html">Sites We Like</a></li>
-							<li><a href="/html/links/links-o-rama.html">Reading List</a></li>
-							<li><a href="/html/links/mailing-lists.html">Learning Pathway</a></li>
+							<li><a href="server">Media Server</a></li>
+							<li><a href="movies">Movie List</a></li>
+							<li><a href="links">Sites We Like</a></li>
+							<li><a href="resources">Reading List</a></li>
+							<!-- <li><a href="/html/links/mailing-lists.html">Learning Pathway</a></li> -->
 						</ul>
 					</li>
 				</ul>
 				<ul id="lastItem" class="nav">
 					<li class="multi"><a href=""><span class="callStatusPending">SUBMIT!</span> &raquo;</a>        	
 						<ul class="subNav">
-							<li><a href="/html/defcon-31/dc-31-cfi.html">Call for Ideas</a></li>
-							<li><a href="/html/defcon-31/dc-31-cfi.html">CTF Room</a></li>
-							<li><a href="/html/defcon-31/dc-31-cfi.html">Tools</a></li>
+							<li><a href="user/submissions">Call for Ideas</a></li>
+							<li><a href="">CTF Room</a></li>
+							<li><a href="">Tools</a></li>
 						</ul>
 					</li>
 				</ul>    
@@ -239,13 +240,13 @@
 						</script>
 					</section> <!-- /Main Content -->
 					<section class="ten columns alpha main">
-						<h2 class="section-title"><span>Hackorld</span> Webinars</h2>
+						<h3 class="section-title"><span>Hackorld</span> Webinars</h3>
 						<div class="row mb-4">
 							<div class="col-sm-4">
 								<a class="callout-icon webcast" href="html/webcast/webcast-home.html" title="Webinars"></a>
 							</div>
 							<div class="col-sm-8">
-								<h3 class="section-detail">Security Research in Real Time</h3>
+								<h4 class="section-detail">Security Research in Real Time</h4>
 								<ul class="list_">
 									<li>December 14, 2022 - <a href="html/webcast/12142022-exploiting-vulnerabilities-in-your-container-workloads-with-aws.html">Exploiting Vulnerabilities in Your Container Workloads with AWS</a></li>
 
@@ -255,7 +256,7 @@
 							</div>
 						</div>
 
-						<h2 class="section-title"><span>Hackorld</span> Archives</h2>
+						<h3 class="section-title"><span>Hackorld</span> Archives</h3>
 						<div class="row mb-4">
 							<div class="col-sm-4">
 								<a class="callout-icon play" href="https://www.youtube.com/user/BlackHatOfficialYT" target="_blank" rel="noopener noreferrer" title="View Black Hat videos on YouTube"></a>
@@ -266,6 +267,119 @@
 									<li>View all of our archived videos on our <a href="https://www.youtube.com/user/BlackHatOfficialYT" target="_blank" rel="noopener noreferrer">YouTube channel</a></li>
 								</ul>
 							</div>
+						</div>
+
+						<h3 class="section-title">You have got an exceptional opportunity to <span>meet all these people in one place</span></h3>
+						<div class="row mb-4 meet-block">
+							<div class="grid">
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title one_">White hat hackers</div>
+										<img loading="lazy" class="meet-img" src="assets/images/EXP-401-white.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">Highly skilled security researchers</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title two_">Selected investors</div>
+										<img loading="lazy" class="meet-img" src="assets/images/PEN-100-icon-white.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">Classical and cryptocurrency oriented</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title three_">Cybersecurity companies</div>
+										<img loading="lazy" class="meet-img" src="assets/images/SOC-200-white.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">Industry leaders, CEOs, COOs, CFOs, CISOs, CIOs</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title four_">Blockchain pioneers</div>
+										<img loading="lazy" class="meet-img" src="assets/images/PEN-300-white.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">Engineers, developers and enthusiasts</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title five_">Top tech bloggers</div>
+										<img loading="lazy" class="meet-img" src="assets/images/WEB-100-icon-white.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">Prominent influencers</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="uppercase meet-title six_ ">Crypto company executives</div>
+										<img loading="lazy" class="meet-img" src="assets/images/SSD-100_White_optimized.svg" alt="">
+										<div>
+											<p class="uppercase meet-detail">CEOs, COOs, CISOs</p>
+										</div>
+									</div>
+								</div>
+								<div class="meet-item p-1">
+									<div class="coursefilter__course">
+										<div class="meet-title uppercase seven_">Bug bounty hunters</div>
+										<img loading="lazy" class="meet-img" src="assets/images/WEB-300-white.svg" alt="">
+										<div>
+											<p class="meet-detail uppercase">Top bounty hunters and threat hunters</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="ten columns alpha">
+						<h3 class="section-title">Speak to our experts <span>about your needs today</span></h3>
+						<div class="mb-4">
+							<form>
+								<div class="form-flex">
+									<div class="form-group">
+										<label>First Name <span>*</span> </label>
+										<input type="text" class="input-control">
+									</div>
+									<div class="form-group">
+										<label>Last Name <span>*</span> </label>
+										<input type="text" class="input-control">
+									</div>
+								</div>
+								<div class="form-flex">
+									<div class="form-group">
+										<label>Email <span>*</span> </label>
+										<input type="email" class="input-control">
+									</div>
+									<div class="form-group">
+										<label>Phone <span>*</span> </label>
+										<input type="text" class="input-control">
+									</div>
+								</div>
+								<div class="form-flex">
+									<div class="form-group">
+										<label>Company <span>*</span> </label>
+										<input type="text" class="input-control">
+									</div>
+								</div>
+								<div class="form-flex">
+									<div class="form-group">
+										<label>Message <span>*</span> </label>
+										<textarea class="input-control"></textarea>
+									</div>
+								</div>
+								<div class="form-flex">
+									<div class="form-group submitBtn">
+										<button type="submit">Submit</button>
+									</div>
+								</div>
+							</form>
 						</div>
 					</section>
 				</section>

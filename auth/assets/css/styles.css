@@ -1,7 +1,6 @@
 body {
   background-color: black;
   color: silver;
-  font-family: Arial;
 }
 
 legend {
@@ -53,8 +52,22 @@ margin-bottom: 10px;
 border-top-left-radius: 0;
 border-top-right-radius: 0;
 }
-
-
+.register-course {
+  text-align: center;
+}
+.register-course a {
+  margin-top: 1rem;
+}
+.roadmap p {
+  font-size: 12px;
+}
+.roadmap.def {
+  margin-top: 2.5rem;
+}
+.roadmap-img {
+  width: 100%;
+  margin-top: 1rem;
+}
 div#header {
   background: url("../../../assets/images/sidebar-img.jpg") no-repeat scroll 0 0 black;
   background-size: contain;

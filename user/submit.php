@@ -51,6 +51,9 @@
 		          <li class="active">
 		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
+							<li>
+		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
+		          </li>
 		          <li>
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
@@ -124,7 +127,7 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Track</label>
 							<div class="col-sm-9">
-								<select name="track" value="<?php echo $track; ?>" class="form-field">
+								<select name="track" value="<?php echo $track; ?>" class="form-control form-field">
 									<option>N/A</option>
 									<option value="aiml">AI, ML, &amp; Data Science</option>
 									<option value="appse">Application Security</option>
@@ -150,7 +153,7 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Secondary</label>
 							<div class="col-sm-9">
-								<select name="secondary" value="<?php echo $secondary; ?>" class="form-field">
+								<select name="secondary" value="<?php echo $secondary; ?>" class="form-control form-field">
 									<option value="">N/A</option>
 									<option value="1879">AI, ML, &amp; Data Science</option>
 									<option value="1831">Application Security</option>
@@ -179,7 +182,7 @@
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Format</label>
 							<div class="col-sm-9">
-								<select name="format" value="<?php echo $format; ?>" class="form-field">
+								<select name="format" value="<?php echo $format; ?>" class="form-control form-field">
 									<option value="">N/A</option>
 									<option value="5574">30-Minute Briefings</option>
 									<option value="5575">40-Minute Briefings</option>
