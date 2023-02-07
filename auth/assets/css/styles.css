@@ -3,12 +3,20 @@ body {
   color: silver;
 }
 
+.row {
+  width: 100% !important;
+}
+
 legend {
   color: silver;
 }
 
 textarea {
   resize: none !important;
+}
+
+.no-touch {
+  cursor: not-allowed;
 }
 
 .text-right{
@@ -126,3 +134,30 @@ a, a:hover, a:focus, .alert-info {color:#5bc2e7;}
 .btn-primary:hover {background-color:#5bc2e7; border:1px solid #5bc2e7;}
 .form-control:focus {border-color:#5bc2e7; box-shadow: none;}
 .form-control {border-color:#5bc2e7; box-shadow: none;}
+
+/* Error Messages */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.error-container .msg.error {
+  border-radius: 2px;
+  padding: 1rem 5rem;
+  background: #640a0678;
+}
+.error-container .msg.success {
+  border-radius: 2px;
+  padding: 1rem 5rem;
+  background: #06642578;
+}
+.error-container .msg > li {
+  list-style: decimal-leading-zero;
+  margin-bottom: 0.3rem;
+  padding: .03rem .5rem;
+  font-size: 10px;
+  font-family: 'Inter', Helvetica, sans-serif;
+}

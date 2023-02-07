@@ -346,12 +346,17 @@
 					<p>
 		        <b><a href="register.php">Signup</a></b> to get started.
 		      </p>
-          <h4>No account? Then <a href="register.php" class="btn btn-lg btn-primary">Sign-up</a></h4>
+          <h4>No account? Then <a href="register.php" class="btn btn-md btn-primary">Sign-up</a></h4>
 
 	      </div>
 
 	      <div class="col-lg-6">
 		      <form accept-charset="UTF-8" action="signin.php" class="form-signin new_user" id="new_user" method="POST">
+
+						<div class="error-container form-group">
+							<?php include(ROOT_PATH . "/app/helpers/formMsg.php"); ?>
+						</div>
+
 		        <fieldset>
 		          <legend>Login</legend>
               <label class="sr-only">Email address</label>

@@ -1,5 +1,7 @@
 <?php
 
+  include(ROOT_PATH . "/app/helpers/validateUser.php");
+
   $table = "users";
   $admin_users = selectAll($table);
 
@@ -31,7 +33,7 @@
     $_SESSION['type'] = 'success';
 
     if ($_SESSION['admin']) {
-      header('location: ' . BASE_URL . 'admin/index.php'); 
+      header('location: ' . BASE_URL . 'user/account.php?id=' . $user['id']); 
     } else {
       header('location: ' . BASE_URL . 'user/account.php?id=' . $user['id']);
     }
@@ -40,7 +42,7 @@
 
   // Create User
   if (isset($_POST['createAccount']) || isset($_POST['createAdmin'])) {
-    // $errors = validateUser($_POST);
+    $errors = validateUser($_POST);
 
     if (count($errors) === 0) {
       unset($_POST['createAccount'], $_POST['passwordagain'], $_POST['emailagain']);
@@ -73,7 +75,7 @@
 
   // Login User
   if (isset($_POST['signinBtn'])) {
-    // $errors = validateLogin($_POST);
+    $errors = validateLogin($_POST);
 
     if (count($errors) === 0) {
       $user = selectOne($table, ['email' => $_POST['email']]);
@@ -89,7 +91,7 @@
   }
 
   if (isset($_POST['updateUser'])) {
-    // $errors = validateUser($_POST);
+    $errors = validateUser($_POST);
 
     if (count($errors) === 0) {
       $id = $_POST['id'];

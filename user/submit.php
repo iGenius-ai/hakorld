@@ -57,6 +57,14 @@
 		          <li>
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
+							<?php if($_SESSION['admin']): ?>
+								<li>
+									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
+								</li>
+								<li>
+									<a href="viewUsers" accesskey="v"><u>V</u>iew Users</a>
+								</li>
+							<?php endif; ?>
 		          <li class="inactive">
 		            <a href="../logout.php" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
 		          </li>

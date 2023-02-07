@@ -54,12 +54,12 @@
 		          <li class="active">
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
-							<?php if(!$_SESSION['admin']): ?>
+							<?php if($_SESSION['admin']): ?>
 								<li>
-									<a href="#" accesskey="a"><u>R</u>eview Proposals</a>
+									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
 								<li>
-									<a href="#" accesskey="v"><u>V</u>iew Users</a>
+									<a href="viewUsers" accesskey="v"><u>V</u>iew Users</a>
 								</li>
 							<?php endif; ?>
 		          <li class="inactive">
@@ -70,6 +70,11 @@
         </div>
         
         <div class="col-lg-10" id="content">
+
+          <div class="error-container form-group">
+            <?php include(ROOT_PATH . "/app/includes/message.php"); ?>
+          </div>
+
           <form action="account.php?id=<?php echo $user['id']; ?>" method="POST" class="form-horizontal" enctype="multipart/form-data">
 	          <div class="fieldset form-horizontal">
 		          <legend>My Account</legend>

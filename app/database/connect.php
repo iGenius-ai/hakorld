@@ -2,7 +2,7 @@
 
   $host = "localhost";
   $user = "root";
-  $pass = "@Restoration72";
+  $pass = "";
   $dbName = "hakorld";
 
   $conn = new MySQLi($host, $user, $pass, $dbName);

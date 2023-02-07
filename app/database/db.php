@@ -126,5 +126,44 @@
     $stmt = executeQuery($sql, ['id' => $id]);
     return $stmt->affected_rows;
   }
+  
+  // Get Author of Proposal
+  function getPostAuthor($user_id)
+  {
+    global $conn;
+    $sql = "SELECT firstname, lastname FROM users WHERE id=$user_id";
+
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      return mysqli_fetch_assoc($result)['firstname'];
+    } else {
+      return null;
+    }
+  }
+
+  function getPostAuthorLName($user_id)
+  {
+    global $conn;
+    $sql = "SELECT firstname, lastname FROM users WHERE id=$user_id";
+
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+      return mysqli_fetch_assoc($result)['lastname'];
+    } else {
+      return null;
+    }
+  }
+
+  // Approve Paper Submission
+  function approvePaper($table, $id, $data)
+  {
+    global $conn;
+    $sql = "UPDATE $table SET status='Approved' ";
+
+    $sql = $sql . " WHERE id=?";
+    $data['id'] = $id;
+    $stmt = executeQuery($sql, $data);
+    return $stmt->affected_rows;
+  }
 
 ?>

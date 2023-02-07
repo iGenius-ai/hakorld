@@ -18,6 +18,13 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <script src="../assets/js/jquery-3.3.1.min.js"></script>
+
+		<style>
+			body {
+				font-family: "Inter", sans-serif;
+			}
+		</style>
+
   </head>
   <body>
     <div class="container">
@@ -44,36 +51,8 @@
 							<legend>Create Account</legend>
 						</div>
 	
-						<div class="form-group">
-							<label class="col-sm-3 control-label">Email*:</label>
-							<div class="col-sm-9">
-								<input type="email" class="form-control" id="email" value="<?php echo $email; ?>" name="email" />
-								<p class="help-block">Required</p>
-							</div>
-						</div>
-	
-						<div class="form-group">
-							<label class="col-sm-3 control-label">Confirm Email*:</label>
-							<div class="col-sm-9">
-								<input type="email" class="form-control" id="email_login" value="<?php echo $emailagain; ?>" name="emailagain" />
-								<p class="help-block">Confirm your email</p>
-							</div>
-						</div>
-	
-						<div class="form-group">
-							<label class="col-sm-3 control-label">Password*:</label>
-							<div class="col-sm-9">
-								<input type="password" class="form-control" id="password" value="<?php echo $password; ?>" name="password" />
-								<p class="help-block">Required. Password must contain at least 8 characters consisting of upper/lower case letters and numbers or the following characters: !,@,*,$,#,&,%</p>
-							</div>
-						</div>
-	
-						<div class="form-group">
-							<label class="col-sm-3 control-label">Confirm Password*:</label>
-							<div class="col-sm-9">
-								<input type="password" class="form-control" id="password_again" value="<?php echo $passwordagain; ?>" name="passwordagain" />
-								<p class="help-block">Required</p>
-							</div>
+						<div class="error-container form-group">
+							<?php include(ROOT_PATH . "/app/helpers/formMsg.php"); ?>
 						</div>
 
 						<div class="form-group">
@@ -91,11 +70,43 @@
 								<p class="help-block">Required</p>
 							</div>
 						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Email*:</label>
+							<div class="col-sm-9">
+								<input type="email" class="form-control" id="email" value="<?php echo $email; ?>" name="email" />
+								<p class="help-block">Required</p>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Confirm Email*:</label>
+							<div class="col-sm-9">
+								<input type="email" class="form-control" id="email_login" value="<?php echo $emailagain; ?>" name="emailagain" />
+								<p class="help-block">Confirm your email</p>
+							</div>
+						</div>
 	
 						<div class="form-group">
 							<label for="phone" class="col-sm-3 control-label">Phone*:</label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" value="<?php echo $phone; ?>" name="phone" />
+								<p class="help-block">Required</p>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Password*:</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="password" value="<?php echo $password; ?>" name="password" />
+								<p class="help-block">Required. Password must contain at least 8 characters consisting of upper/lower case letters and numbers or the following characters: !,@,*,$,#,&,%</p>
+							</div>
+						</div>
+	
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Confirm Password*:</label>
+							<div class="col-sm-9">
+								<input type="password" class="form-control" id="password_again" value="<?php echo $passwordagain; ?>" name="passwordagain" />
 								<p class="help-block">Required</p>
 							</div>
 						</div>
@@ -117,6 +128,7 @@
 						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button name="createAccount" class="btn btn-large btn-primary">Create Account</button>
+								|| Already registered? <a href="signin">Login</a> here
 							</div>
 						</div>
 					</form>

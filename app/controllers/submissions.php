@@ -5,6 +5,7 @@
 
   $errors = array();
   $id = "";
+  $user_id = "";
   $accepts = "";
   $title = "";
   $track = "";
@@ -29,6 +30,7 @@
   $videosample = "";
   $reviewmessage = "";
   $fileupload = "";
+  $status = "";
   // $speakers = "";
   $created_at = "";
 
@@ -60,6 +62,7 @@
     $videosample = $submission['videosample'];
     $reviewmessage = $submission['reviewmessage'];
     $fileupload = $submission['fileupload'];
+    $status = $submission['status'];
     // $speakers = $submission['speakers'];
   }
 
@@ -90,6 +93,7 @@
       $_POST['disclosevulnerable'] = isset($_POST['disclosevulnerable']) ? 1 : 0;
       $_POST['demo'] = isset($_POST['demo']) ? 1 : 0;
       $_POST['accepts'] = isset($_POST['accepts']) ? 1 : 0;
+      $_POST['status'] = "Pending";
 
       $submit_id = create($table, $_POST);
       $_SESSION['message'] = "Post created successfully";
@@ -179,6 +183,18 @@
     $_SESSION['type'] = "success";
     header("location: " . BASE_URL . "user/submissions.php"); 
     exit();
+  }
+
+  // Approve Paper Submission
+  if (isset($_GET['id'])) {
+    $id = $_POST['id'];
+    unset($_POST['id']);
+
+    $submit_id = approvePaper($table, $_GET['id'], $_POST);
+    $_SESSION['message'] = 'Proposal approved';
+    $_SESSION['type'] = 'success';
+  
+    header('location: ' . BASE_URL . 'user/proposals.php');
   }
 
 ?>
