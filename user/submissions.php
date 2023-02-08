@@ -74,16 +74,15 @@
 
         <div class="col-lg-10" id="content">
           <div class="row">
-            <div class="col-lg-10">
-              <a href="submit.php" class="btn btn-large btn-primary">Submit a new proposal</a>
-
+              <a href="submit.php" class="btn btn-sm btn-primary">Submit a new proposal</a>
+            <div class="col-lg-10" style="overflow-x: auto;">
               <table class="table">
                 <thead>
                   <tr>
                     <th style="width: 10px;">#</th>
-                    <th>Title</th>
-                    <th>Document</th>
-                    <th>Actions</th>
+                    <th style="min-width: 200px;">Title</th>
+                    <th style="min-width: 170px;">Document</th>
+                    <th style="min-width: 130px;">Actions</th>
                     <th>Status</th>
                   </tr>
                 </thead>
@@ -94,7 +93,7 @@
                         <td><?php echo $key + 1; ?></td>
                         <td><?php echo $submission["title"]; ?></td>
                         <td><?php echo $submission["fileupload"]; ?></td>
-                        <td>
+                        <td style="font-size: 10px;">
                           <a href="edit.php?id=<?php echo $submission["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
                           <a href="edit.php?delete_id=<?php echo $submission['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
                         </td>

@@ -75,7 +75,7 @@
         </div>
 
         <div class="col-lg-10" id="content">
-          <div class="row">
+          <div class="row" style="overflow-x: auto;">
             <div class="col-lg-10">
               <!-- <a href="submit.php" class="btn btn-large btn-primary">Submit a new proposal</a> -->
 
@@ -83,10 +83,10 @@
                 <thead>
                   <tr>
                     <th style="width: 10px;">#</th>
-                    <th>Users</th>
+                    <th style="min-width: 170px;">Users</th>
                     <th>Email</th>
-                    <th>Title</th>
-                    <th>Actions</th>
+                    <th style="min-width: 60px;">Title</th>
+                    <th style="min-width: 130px;">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -97,7 +97,7 @@
                         <td><?php echo $user["lastname"] . " " . $user["firstname"]; ?></td>
                         <td><?php echo $user["email"]; ?></td>
                         <td><?php echo $user["title"]; ?></td>
-                        <td>
+                        <td style="font-size: 10px;">
                           <a href="edit.php?id=<?php echo $user["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
                           <a href="edit.php?delete_id=<?php echo $user['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
                         </td>

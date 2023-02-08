@@ -2,7 +2,7 @@
 	include("../path.php");
 	include(ROOT_PATH . "/app/database/db.php");
 	include(ROOT_PATH . "/app/controllers/users.php"); 
-	include(ROOT_PATH . "/app/controllers/submissions.php"); 
+	include(ROOT_PATH . "/app/controllers/courses.php"); 
 
   if (!$_SESSION['firstname']) {
     header('location: ' . BASE_URL . 'auth/signin.php');
@@ -21,7 +21,7 @@
 	  <meta property="og:description" content="">
 	  <meta property="og:image" content="https://www.blackhat.com/images/page-graphics/metatag/logo-2018.png">
 
-    <title>Hakorld - Review Submissions</title>
+    <title>Hakorld - View Courses</title>
 
     <link href="../auth/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="../auth/assets/css/styles.css" rel="stylesheet">
@@ -51,64 +51,56 @@
 	        <div class="nav">
 		        <ul class="nav nav-tabs nav-stacked">
 		          <li>
-		            <a href="submissions" accesskey="s"><u>S</u>ubmissions</a>
+		            <a href="submissions.php" accesskey="s"><u>S</u>ubmissions</a>
 		          </li>
 							<li>
-		            <a href="courses" accesskey="c"><u>C</u>ourses</a>
+		            <a href="courses.php" accesskey="c"><u>C</u>ourses</a>
 		          </li>
 		          <li>
-		            <a href="account?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
+		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
               <?php if($_SESSION['admin']): ?>
-								<li class="active">
+								<li>
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
-								<li>
+								<li class="active">
 									<a href="viewUsers" accesskey="v"><u>V</u>iew Users</a>
 								</li>
 							<?php endif; ?>
 		          <li class="inactive">
-		            <a href="../logout" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
+		            <a href="../logout.php" accesskey="l" data-method="post" rel="nofollow"><u>L</u>ogout</a>
 		          </li>
 		        </ul>
 	        </div>
         </div>
 
         <div class="col-lg-10" id="content">
-          <div class="row">
-            <div class="col-lg-10" style="overflow-x: auto;">
+          <div class="row" style="overflow-x: auto;">
+            <div class="col-lg-10">
+              <!-- <a href="submit.php" class="btn btn-large btn-primary">Submit a new proposal</a> -->
 
               <table class="table">
                 <thead>
                   <tr>
                     <th style="width: 10px;">#</th>
-                    <th>Title</th>
-                    <th>Author</th>
-										<th>Status</th>
-                    <th>Actions</th>
+                    <th style="min-width: 170px;">Courses</th>
+                    <th>Price</th>
+                    <th style="min-width: 165px;">Date Modified</th>
+                    <th style="min-width: 130px;">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <?php foreach ($submissions as $key => $submission): ?>
+                  <?php foreach ($courses as $key => $course): ?>
                     <?php if(!null): ?>
                       <tr>
                         <td><?php echo $key + 1; ?></td>
-                        <td><?php echo $submission["title"]; ?></td>
-												<td><?php echo getPostAuthorLName($submission["user_id"]) . " " . getPostAuthor($submission["user_id"]); ?></td>
-                        <td><?php echo $submission["status"]; ?></td>
-												<td style="font-size: 10px;">
-                          <?php if ($submission["status"] != "Approved"): ?>
-                            <a href="proposals.php?id=<?php echo $submission["id"]; ?>" class="btn btn-sm btn-primary">Approve</a>
-                            <a href="edit.php?delete_id=<?php echo $submission['id']; ?>" class="btn btn-sm btn-danger">Decline</a>
-                          <?php else: ?>
-                            <a href="proposals.php?id=<?php echo $submission["id"]; ?>" class="btn no-touch btn-sm btn-primary" disabled>Approve</a>
-                            <a href="edit.php?delete_id=<?php echo $submission['id']; ?>" class="btn btn-sm btn-danger" disabled>Decline</a>
-                          <?php endif; ?>
+                        <td><?php echo $course["course_title"]; ?></td>
+                        <td>$<?php echo $course["priceDisplay"]; ?></td>
+                        <td><?php echo $course["created_at"]; ?></td>
+                        <td style="font-size: 10px;">
+                          <a href="course_edit.php?id=<?php echo $course["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>
+                          <a href="course_edit.php?delete_id=<?php echo $course['id']; ?>" class="btn btn-sm btn-danger">Delete</a>
                         </td>
-                      </tr>
-                    <?php else: ?>
-                      <tr>
-                        <td colspan="3">No proposal record found.</td>
                       </tr>
                     <?php endif; ?>
 									<?php endforeach; ?>

@@ -59,6 +59,9 @@
 		          </li>
 							<?php if($_SESSION['admin']): ?>
 								<li>
+									<a href="addCourse" accesskey="v"><u>A</u>dd Courses</a>
+								</li>
+								<li>
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
 								<li>
@@ -78,7 +81,7 @@
 							<h3>Your Training Roadmap</h3>
 							<div class="col-lg-6 register-course">
 								<img src="../assets/images/undraw_mind_map_re_nlb6.svg" class="roadmap-img" alt="Roadmap Image">
-								<a href="#modal" data-toggle="modal" class="btn btn-md btn-primary">Register for a course</a>
+								<button class="btn btn-md btn-primary btn-open">Register for a course</button>
 							</div>
 							<div class="col-lg-4">
 								<div class="roadmap">
@@ -103,6 +106,38 @@
         </div>
       </div>
 
+			<!-- Modal Section -->
+			<section class="modal hidden"> <!-- Add .modal and .hidden -->
+				<div class="flex">
+					<img src="../assets/images/canary.png" width="50px" height="50px" alt="User">
+					<button class="btn-close">&times;</button>
+				</div>
+				<div>
+					<h3>Pick a course and apply</h3>
+					<select name="" id="" class="form-control">
+						<option value="">-- Select a course --</option>
+						<option value="">Machine Learning</option>
+						<option value="">Artificial Intelligence</option>
+						<option id="option-four" value="">Hardware/Embedded Systems</option>
+						<option value="">Neural Networks</option>
+					</select>
+				</div>
+
+				<div class="flex hidden option-detail">
+					<img src="../assets/images/banner.jpg" alt="" width="150px" height="150px" style="padding: 1rem;">
+					<div>
+						<h4>Hacking Course</h4>
+						<small>$450.00</small>
+						<p>This is a 6-Month training course on Ethical Hacking</p>
+					</div>
+				</div>
+
+				<button class="btn btn-pay">Pay with PayStack &check;</button>
+			</section>
+
+			<div class="overlay hidden"></div>
+			<!-- End Modal Section -->
+
  	  </div> <!-- /container -->
  	  <div class="row">
 	    <div id="footer" class="col-sm-12">
@@ -122,5 +157,62 @@
 	    </div>
 	  </div>
 
+		<script>
+
+			const modal = document.querySelector(".modal");
+			const overlay = document.querySelector(".overlay");
+			const openModalBtn = document.querySelector(".btn-open");
+			const closeModalBtn = document.querySelector(".btn-close");
+
+			const optionDetail = document.querySelector(".option-detail");
+			const optionThree = document.querySelector("#option-four");
+			optionThree.addEventListener("click", function () {
+				optionDetail.classList.remove("hidden");
+				console.log(optionDetail);
+			});
+
+			const openModal = function () {
+				modal.classList.add("fade-in");
+				overlay.classList.remove("hidden");
+				setTimeout(() => {
+					modal.classList.remove("hidden");
+				}, 100);
+
+				if (modal.classList.contains("fade-out")) {
+					modal.classList.remove("fade-out");
+				}
+			};
+			const closeModal = function () {
+				overlay.classList.add("hidden");
+				setTimeout(() => {
+					modal.classList.add("hidden");
+				}, 100);
+
+				if (modal.classList.contains("fade-in")) {
+					modal.classList.remove("fade-in");
+					modal.classList.add("fade-out");
+				} else {
+					modal.classList.remove("fade-out");
+				}
+			};
+
+			openModalBtn.addEventListener("click", openModal);
+			closeModalBtn.addEventListener("click", closeModal);
+			overlay.addEventListener("click", closeModal);
+
+			document.addEventListener("keydown", function (e) {
+				if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+					closeModal();
+
+					if (modal.classList.contains("fade-in")) {
+						modal.classList.remove("fade-in");
+						modal.classList.add("fade-out");
+					} else {
+						modal.classList.remove("fade-out");
+					}
+				}
+			});
+
+		</script>
   </body>
 </html>

@@ -69,3 +69,6 @@ CREATE TABLE `hakorld`.`speakers` (
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB; 
+
+-- Courses table
+CREATE TABLE `hakorld`.`courses` (`id` INT(11) NOT NULL AUTO_INCREMENT , `course_title` VARCHAR(255) NOT NULL , `course_details` TEXT NOT NULL , `priceDisplay` INT(11) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
