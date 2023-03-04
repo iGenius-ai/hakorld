@@ -3,6 +3,7 @@
 	include(ROOT_PATH . "/app/database/db.php");
 	include(ROOT_PATH . "/app/controllers/users.php"); 
 	include(ROOT_PATH . "/app/controllers/submissions.php"); 
+	include(ROOT_PATH . "/app/controllers/courses.php"); 
 
   if (!$_SESSION['firstname']) {
     header('location: ' . BASE_URL . 'auth/signin.php');
@@ -116,17 +117,20 @@
 					<h3>Pick a course and apply</h3>
 					<select name="" id="" class="form-control">
 						<option value="">-- Select a course --</option>
-						<option value="">Machine Learning</option>
-						<option value="">Artificial Intelligence</option>
-						<option id="option-four" value="">Hardware/Embedded Systems</option>
-						<option value="">Neural Networks</option>
+						<?php foreach ($courses as $key => $course): ?>
+							<?php if (!empty($course_id) && $course_id == $course['id'] ): ?>
+								<option selected value="<?php echo $course['id'] ?>"><?php echo $course['course_title'] ?></option>
+							<?php else: ?>
+								<option value="<?php echo $course['id'] ?>"><?php echo $course['course_title'] ?></option>
+							<?php endif; ?>
+						<?php endforeach; ?>
 					</select>
 				</div>
 
 				<div class="flex hidden option-detail">
 					<img src="../assets/images/banner.jpg" alt="" width="150px" height="150px" style="padding: 1rem;">
 					<div>
-						<h4>Hacking Course</h4>
+						<h4><?php echo $course['course_title']; ?></h4>
 						<small>$450.00</small>
 						<p>This is a 6-Month training course on Ethical Hacking</p>
 					</div>
@@ -164,12 +168,12 @@
 			const openModalBtn = document.querySelector(".btn-open");
 			const closeModalBtn = document.querySelector(".btn-close");
 
-			const optionDetail = document.querySelector(".option-detail");
-			const optionThree = document.querySelector("#option-four");
-			optionThree.addEventListener("click", function () {
-				optionDetail.classList.remove("hidden");
-				console.log(optionDetail);
-			});
+			// const optionDetail = document.querySelector(".option-detail");
+			// const optionThree = document.querySelector("#option-four");
+			// optionThree.addEventListener("click", function () {
+			// 	optionDetail.classList.remove("hidden");
+			// 	console.log(optionDetail);
+			// });
 
 			const openModal = function () {
 				modal.classList.add("fade-in");

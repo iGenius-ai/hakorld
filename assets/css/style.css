@@ -109,6 +109,71 @@ h3 span {
 	transition: all 0.2s ease-in-out;
 }
 
+/* --- Courses Section --- */
+.courses__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.course__item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  background: linear-gradient(180deg, #282828 10%, #000 50%);
+}
+.course__item * {
+  color: #fff;
+  font-family: 'ration_oneregular';
+}
+.course__item .flex {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0;
+}
+.course__item .flex > p {
+  border-bottom: 2px solid #000;
+  padding: .5rem;
+  font-size: 1rem;
+  margin: 0;
+}
+.course__item .flex > div {
+  text-align: center;
+  padding: .5rem 0;
+}
+.course__item .flex div > h5 {
+  font-family: 'bebas_neueregular';
+  margin: .4rem 0;
+}
+.course__item .flex div > p {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: .4rem 0;
+}
+.course__item .course__details {
+  margin-top: .5rem;
+  display: flex;
+}
+.course__item .course__details > div {
+  margin-left: 0;
+  margin-right: 0;
+  flex: 0 0 65%;
+}
+.course__item .course__details img {
+  width: 100px;
+  margin-left: 0;
+}
+.course__item .course__details * {
+  margin: auto 1rem;
+  color: #fff;
+}
+.course__item .course__details p {
+  margin: 0;
+}
+.course__item a.course__link {
+  color: #6ca5e6;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 /* Hover Effect */
 .meet-item:nth-child(1) .coursefilter__course:hover {
   background: #009999;
@@ -152,7 +217,6 @@ h3 span {
   color: #fff;
   transition: all 0.2s ease-in-out;
 }
-
 .meet-item .coursefilter__course:hover * {
   color: #fff;
   transition: all 0.2s ease-in-out;
@@ -193,4 +257,13 @@ h3 span {
 	.form-flex {
 		display: block;
 	}
+}
+
+@media screen and (max-width: 380px) {
+  .courses__grid {
+    display: unset !important;
+  }
+  .course__item .course__details {
+    justify-content: space-between;
+  }
 }

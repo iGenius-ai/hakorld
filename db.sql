@@ -71,4 +71,7 @@ CREATE TABLE `hakorld`.`speakers` (
 ) ENGINE = InnoDB; 
 
 -- Courses table
-CREATE TABLE `hakorld`.`courses` (`id` INT(11) NOT NULL AUTO_INCREMENT , `course_title` VARCHAR(255) NOT NULL , `course_details` TEXT NOT NULL , `priceDisplay` INT(11) NOT NULL , `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `hakorld`.`courses` (`id` INT(11) NOT NULL AUTO_INCREMENT , `course_title` VARCHAR(255) NOT NULL , `course_price` VARCHAR(255) NOT NULL , `course_date` VARCHAR(255) NOT NULL , `course_track` VARCHAR(255) NOT NULL , `course_format` VARCHAR(255) NOT NULL , `skill_level` VARCHAR(255) NOT NULL , `experience` VARCHAR(255) NOT NULL , `course_details` TEXT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+-- Payments table
+CREATE TABLE `hakorld`.`payments` (`id` INT(11) NOT NULL AUTO_INCREMENT , `user_id` INT(11) NOT NULL , `reference` VARCHAR(255) NOT NULL , `status` VARCHAR(255) NOT NULL , `paid_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;

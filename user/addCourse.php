@@ -90,16 +90,51 @@
 						</div>
 						
 						<div class="form-group">
-							<label class="col-sm-3 control-label">Course Details *:</label>
+							<label class="col-sm-3 control-label">Course Price *:</label>
 							<div class="col-sm-9">
-								<textarea name="course_details" placeholder="Short course description" class="form-control"><?php echo $course_details; ?></textarea>
+								<input type="number" class="form-control" value="<?php echo $course_price; ?>" name="course_price">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="col-sm-3 control-label">Course Price *:</label>
+							<label class="col-sm-3 control-label">Course End Date *:</label>
 							<div class="col-sm-9">
-								<input type="number" class="form-control" value="<?php echo $priceDisplay; ?>" name="priceDisplay">
+								<input type="text" class="form-control" value="<?php echo $course_date; ?>" name="course_date" value="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Course Track *:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" value="<?php echo $course_track; ?>" name="course_track" value="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Course Format *:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" value="<?php echo $course_format; ?>" name="course_format" value="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Course Skill Level *:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" value="<?php echo $skill_level; ?>" name="skill_level" value="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Learning Experience *:</label>
+							<div class="col-sm-9">
+								<input type="text" class="form-control" value="<?php echo $experience; ?>" name="experience" value="">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">Course Details *:</label>
+							<div class="col-sm-9">
+								<textarea name="course_details" cols="30" rows="5" placeholder="Short course description" class="form-control"><?php echo $course_details; ?></textarea>
 							</div>
 						</div>
 

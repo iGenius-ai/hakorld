@@ -38,6 +38,7 @@
     // if the email matches the customer who owns the product etc
     // Give value
     echo "<h2>Thank you for making a purchase. Your file has been sent your email.</h2>";
+    
   }
 
 ?>

@@ -100,7 +100,7 @@ nav.main,
 .price-box,
 .price-box-wrapper a .left, 
 #site-footer .links p strong {
-  font-family: 'Play', sans-serif !important;
+  font-family: 'Play', sans-serif;
   text-transform: uppercase;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,

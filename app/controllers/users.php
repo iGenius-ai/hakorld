@@ -91,13 +91,17 @@
   }
 
   if (isset($_POST['updateUser'])) {
-    $errors = validateUser($_POST);
+    // $errors = validateUser($_POST);
 
     if (count($errors) === 0) {
       $id = $_POST['id'];
       unset($_POST['updateUser'], $_POST['id']);
         
-      $_POST['admin'] = isset($_POST['admin']) ? 1 : 0;
+      if ($_SESSION['admin']) {
+        $_POST['admin'] = 1;
+      } else {
+        $_POST['admin'] = 0;
+      }
       $count = update($table, $id, $_POST);
       $_SESSION['message'] = 'User updated';
       $_SESSION['type'] = 'success';

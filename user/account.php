@@ -55,6 +55,9 @@
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
 							<?php if($_SESSION['admin']): ?>
+                <li>
+									<a href="addCourse" accesskey="v"><u>A</u>dd Courses</a>
+								</li>
 								<li>
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
@@ -79,7 +82,9 @@
 	          <div class="fieldset form-horizontal">
 		          <legend>My Account</legend>
 	          </div>
+
             <input type="hidden" name="id" value="<?php echo $id ?>" required>
+            
 	          <div class="form-group">
 		          <label for="email" class="col-sm-3 control-label">Email:</label>
 		          <div class="col-sm-9">

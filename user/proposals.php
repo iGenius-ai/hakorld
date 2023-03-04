@@ -60,6 +60,9 @@
 		            <a href="account?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
               <?php if($_SESSION['admin']): ?>
+                <li>
+									<a href="addCourse" accesskey="v"><u>A</u>dd Courses</a>
+								</li>
 								<li class="active">
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>

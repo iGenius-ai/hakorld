@@ -1,14 +1,12 @@
 <?php
 
-// Initialaize CURL
+  // Initialaize CURL
   $curl = curl_init();
 
-  $zero = 00;
-  $email = $_POST['email'];
-  // $amount = $_POST['amount'] . $zero;
 
-  $amount = 350 . $zero.$zero;
-  var_dump($amount);
+  $errors = array();
+  $email = $_POST['email'];
+  $amount = $_POST['amount'];
 
   // Callback URL for Paystack
   $callbackUrl = "http://localhost/defcon/app/PaystackAPI/callback.php";
@@ -20,6 +18,7 @@
     CURLOPT_POSTFIELDS => json_encode([
       'email' => $email,
       'amount' => $amount,
+      'reference' => $reference,
       'callback_url' => $callbackUrl
     ]),
     CURLOPT_HTTPHEADER => [

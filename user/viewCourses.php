@@ -60,6 +60,9 @@
 		            <a href="account.php?id=<?php echo $_SESSION['id'] ?>" accesskey="m"><u>M</u>y account</a>
 		          </li>
               <?php if($_SESSION['admin']): ?>
+                <li>
+									<a href="addCourse" accesskey="v"><u>A</u>dd Courses</a>
+								</li>
 								<li>
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
@@ -95,7 +98,7 @@
                       <tr>
                         <td><?php echo $key + 1; ?></td>
                         <td><?php echo $course["course_title"]; ?></td>
-                        <td>$<?php echo $course["priceDisplay"]; ?></td>
+                        <td>$<?php echo $course["course_price"]; ?></td>
                         <td><?php echo $course["created_at"]; ?></td>
                         <td style="font-size: 10px;">
                           <a href="course_edit.php?id=<?php echo $course["id"]; ?>" class="btn btn-sm btn-primary">Edit</a>

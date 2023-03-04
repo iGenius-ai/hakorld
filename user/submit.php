@@ -59,6 +59,9 @@
 		          </li>
 							<?php if($_SESSION['admin']): ?>
 								<li>
+									<a href="addCourse" accesskey="v"><u>A</u>dd Courses</a>
+								</li>
+								<li>
 									<a href="proposals" accesskey="a"><u>R</u>eview Proposals</a>
 								</li>
 								<li>
