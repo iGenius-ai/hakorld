@@ -46,69 +46,58 @@
 <a id="skipLink"></a>
  <h2 class="pageTitle">Book List</h2>
     
-   <nav class="sixteen columns navholder">
-    
-    <ul id="firstItem" class="nav">
-        <li><a href="https://defcon.org/index.html">Home</a></li>
-    </ul>
-    <ul id="secItem" class="nav">
-        <li><a href="https://defcon.org/html/links/dc-news.html">Recent News</a></li>
-    </ul>
-    <ul id="thirdItem" class="nav">
-        <li class="multi"><a href="https://defcon.org/html/links/book-list.html#">Archives »</a>
-            <ul class="subNav">
-                <li><a href="https://defcon.org/html/links/dc-archives.html">Archives By Show</a></li>
-                		<li><a href="https://defcon.org/html/links/dc-torrent.html">File Downloads</a></li>
-                        <li><a href="https://defcon.org/html/links/dc-ctf.html">CTF Archive</a></li>
-                		<li><a href="https://defcon.org/html/links/dc-tools.html">Tools Released</a></li>
-                		<li><a href="https://defcon.org/html/links/dc_press/dc_press.html">Press Archives</a></li>
-                		<li><a href="https://defcon.org/html/links/dc-video.html">Other Video</a></li>
-            </ul>
-        </li>
-    </ul>
-     <ul id="fourthItem" class="nav"> 
-     	<li class="multi"><a href="https://defcon.org/html/links/book-list.html#">About »</a>
-        	<ul class="subNav">
-     			<li><a href="https://defcon.org/html/links/dtangent.html">The Dark Tangent</a></li>
-                <li><a href="https://defcon.org/html/links/dc-goons.html">Goons</a></li>
-                <li><a href="https://defcon.org/html/links/dc-goon-hof.html">Goon Hall of Fame</a></li>
-                <li><a href="https://defcon.org/html/links/dc-faq/dc-faq.html">FAQ</a></li>
-                <li><a href="https://defcon.org/html/links/dc-contact.html">Contact</a></li>
-            </ul>
-        </li>
-    </ul>
-    <ul id="fifthItem" class="nav">
-        <li class="multi"><a href="https://defcon.org/html/links/book-list.html#">Community »</a>
-        	<ul class="subNav">
-            	<li><a href="https://defcongroups.org/">DEF CON Groups</a></li>
-                <li><a href="https://forum.defcon.org/">DEF CON Forums</a></li>
-            </ul>
-      </li>
-    </ul>
-
-    <ul id="sixthItem" class="nav">
-        <li class="multi"><a href="https://defcon.org/html/links/book-list.html#">Resources »</a>
-<ul class="subNav">
-
-                <li><a href="https://media.defcon.org/">Media Server</a></li>
-                <li><a href="https://defcon.org/html/links/dc-torrent.html">File Downloads</a></li>
-                <li><a href="https://defcon.org/html/links/dc-speakerscorner.html">Speaker's Corner</a></li>
-                <li><a href="https://defcon.org/html/links/book-list.html">Reading List</a></li>
-                <li><a href="https://defcon.org/html/links/movie-list.html">Movie List</a></li>
-                <li><a href="https://defcon.org/html/links/mailing-lists.html">Hacker Mailing Lists</a></li>
-                <li><a href="https://defcon.org/html/links/links-o-rama.html">Sites We Like</a></li>
-            </ul>
-        </li>
-    </ul>
-    <ul id="lastItem" class="nav">
-		<li class="multi"><a href="https://defcon.org/html/links/book-list.html"><span class="callStatusPending">SUBMIT!</span> »</a>        	
-			<ul class="subNav">
-                <li><a href="https://defcon.org/html/defcon-31/dc-31-cfi.html">Call for Ideas</a></li>
-            </ul>
-        </li>
-    </ul>
-    
-</nav>
+ <nav class="sixteen columns navHolder">
+				<ul id="firstItem" class="nav"><li><a href="index">Home</a></li></ul>
+				<ul id="secItem" class="nav"><li><a href="recent">Recent News</a></li></ul>
+				<ul id="thirdItem" class="nav">
+					<li class="multi"><a href="#">Archives &raquo;</a>
+						<ul class="subNav">
+							<li><a href="file_downloads">File Download</a></li>
+							<li><a href="tools">Tools Released</a></li>
+							<li><a href="ctf_archives">CTF Archive</a></li>
+							<li><a href="tutorials">Hakorld Trainings</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="fourthItem" class="nav"> 
+					<li class="multi"><a href="#">About &raquo;</a>
+						<ul class="subNav">
+							<li><a href="#">Genius Playground</a></li>
+							<li><a href="faq">FAQ</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="fifthItem" class="nav">
+					<li class="multi"><a href="#">Community &raquo;</a>
+						<ul class="subNav">
+							<li><a href="#">Hakorld Discord</a></li>
+							<li><a href="#">Hakorld Groups</a></li>
+							<li><a href="#">Hakorld Forums</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul id="sixthItem" class="nav">
+					<li class="multi"><a href="#">Resources &raquo;</a>
+						<ul class="subNav">
+							<li><a href="server">Media Server</a></li>
+							<li><a href="movies">Movie List</a></li>
+							<li><a href="links">Sites We Like</a></li>
+							<li><a href="resources">Reading List</a></li>
+							<!-- <li><a href="/html/links/mailing-lists.html">Learning Pathway</a></li> -->
+						</ul>
+					</li>
+				</ul>
+				<ul id="lastItem" class="nav">
+					<li class="multi"><a href=""><span class="callStatusPending">SUBMIT!</span> &raquo;</a>        	
+						<ul class="subNav">
+							<li><a href="user/submissions">Call for Ideas</a></li>
+							<li><a href="">CTF Room</a></li>
+							<li><a href="">Tools</a></li>
+						</ul>
+					</li>
+				</ul>    
+			</nav>
  
  
 <div class="sixteen columns" id="maincontent">
