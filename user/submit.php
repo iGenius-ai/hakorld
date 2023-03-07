@@ -2,8 +2,7 @@
 	include("../path.php");
 	include(ROOT_PATH . "/app/database/db.php");
 	// include(ROOT_PATH . "/app/controllers/users.php");
-	include(ROOT_PATH . "/app/controllers/submissions.php"); 
-	// include(ROOT_PATH . "/app/controllers/speakers.php"); 
+	include(ROOT_PATH . "/app/controllers/submissions.php");
 
   if (!$_SESSION['firstname']) {
     header('location: ' . BASE_URL . 'auth/signin.php');
@@ -87,46 +86,6 @@
 							<legend>All Fields Required</legend>
 						</div>
 
-						<!-- <?php foreach ($speakers as $key => $speaker): ?>
-							<?php if($speaker['user_id'] != $_SESSION['id']): ?>
-								<a href="#"></a>
-							<?php else: ?>
-								<a href="#" value="<?php echo $speakers; ?>"><?php echo $speaker['first_name'] . " " . $speaker['last_name']; ?></a>
-							<?php endif; ?>
-						<?php endforeach; ?>
-
-						<?php
-							$query = "SELECT id FROM speakers ORDER BY id";
-							$run = mysqli_query($conn, $query);
-							$row = mysqli_num_rows($run);
-						?>
-
-						<?php if($speaker['user_id'] != $_SESSION['id']): ?>
-							<div class="alert alert-danger" role="alert">
-								<h4><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Please add a speaker</h4>
-								<p>
-									You do not have any speakers for this submission. You must add at least one speaker before you can submit the proposal. 
-								</p>
-							</div>
-						<?php endif; ?>
-
-						<br><br>
-						<a href="addSpeaker.php" id="addSpeakerBtn" class="btn btn-large btn-primary">Add a new speaker</a>
-						<br>
-
-						<p>
-							<?php if($row > 0): ?>
-								<?php if($speaker['user_id'] != $_SESSION['id']): ?>
-									<div class="alert alert-warning" role="alert">
-										No speaker added
-									</div>
-								<?php endif; ?>
-							<?php else: ?>
-								No speakers has been added. You must add at least one speaker before you can submit.
-							<?php endif; ?>
-						</p> -->
-						
-						<br>
 						<div class="form-group">
 							<label class="col-sm-3 control-label">Title</label>
 							<div class="col-sm-9">

@@ -18,7 +18,6 @@
     CURLOPT_POSTFIELDS => json_encode([
       'email' => $email,
       'amount' => $amount,
-      'reference' => $reference,
       'callback_url' => $callbackUrl
     ]),
     CURLOPT_HTTPHEADER => [

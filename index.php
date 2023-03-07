@@ -54,6 +54,7 @@
 							<li><a href="file_downloads">File Download</a></li>
 							<li><a href="tools">Tools Released</a></li>
 							<li><a href="ctf_archives">CTF Archive</a></li>
+							<li><a href="tutorials">Hakorld Trainings</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -269,70 +270,70 @@
 							</div>
 						</div>
 
-						<h3 class="section-title">You have got an exceptional opportunity to <span>meet all these people in one place</span></h3>
+						<h3 class="section-title">Sustaining <span>Partners</span></h3>
 						<div class="row mb-4 meet-block">
 							<div class="grid">
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title one_">White hat hackers</div>
 										<img loading="lazy" class="meet-img" src="assets/images/EXP-401-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">Highly skilled security researchers</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title two_">Selected investors</div>
 										<img loading="lazy" class="meet-img" src="assets/images/PEN-100-icon-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">Classical and cryptocurrency oriented</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title three_">Cybersecurity companies</div>
 										<img loading="lazy" class="meet-img" src="assets/images/SOC-200-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">Industry leaders, CEOs, COOs, CFOs, CISOs, CIOs</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title four_">Blockchain pioneers</div>
 										<img loading="lazy" class="meet-img" src="assets/images/PEN-300-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">Engineers, developers and enthusiasts</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title five_">Top tech bloggers</div>
 										<img loading="lazy" class="meet-img" src="assets/images/WEB-100-icon-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">Prominent influencers</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="uppercase meet-title six_ ">Crypto company executives</div>
 										<img loading="lazy" class="meet-img" src="assets/images/SSD-100_White_optimized.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="uppercase meet-detail">CEOs, COOs, CISOs</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 								<div class="meet-item p-1">
 									<div class="coursefilter__course">
 										<div class="meet-title uppercase seven_">Bug bounty hunters</div>
 										<img loading="lazy" class="meet-img" src="assets/images/WEB-300-white.svg" alt="">
-										<div>
+										<!-- <div>
 											<p class="meet-detail uppercase">Top bounty hunters and threat hunters</p>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>

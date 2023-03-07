@@ -58,7 +58,7 @@ ul p.callStatusOpen,ul p.callStatusClosed,ul p.callStatusPending{font:16px 'furo
 .leftSideBar .link {font-size: 1em; display: block; border: thin groove rgba(255,255,255,.5); text-align: center;}
 .leftSideBar h1, h2, h3, h4, h5, h6, p{margin-left:10px;}
 .rightSideBar article{height:100%;box-shadow:inset 0 20px 20px rgba(255,255,255,0.2);-webkit-box-shadow:inset 0 20px 20px rgba(255,255,255,0.2);margin-bottom:10px;}
-.rightSideBar .title{text-align:center;}
+.rightSideBar .title{text-align:center;font-family: ration_oneregular, "Helvetica Neue", Helvetica, Arial, sans-serif;font-weight: 600;}
 .rightSideBar p{margin-left:10px;}
 article.action{background:-moz-linear-gradient(bottom, rgba(222, 173, 0, 0.8), rgba(227, 207, 0, 0.8));background:-webkit-linear-gradient(bottom, rgba(222, 173, 0, 0.8), rgba(227, 207, 0, 0.8));background:-webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(222, 173, 0, 0.8)), color-stop(100%, rgba(227, 207, 0, 0.8)));background:-o-linear-gradient(bottom, rgba(222, 173, 0, 0.8), rgba(227, 207, 0, 0.8));background:linear-gradient(bottom, rgba(222, 173, 0, 0.8), rgba(227, 207, 0, 0.8));border-top:1px #FF9 solid;border-right:1px #ff9 solid;height:100%;min-height:35px;max-height:35px;box-shadow:none;-webkit-box-shadow:none;margin-bottom:10px;border-radius:15px;}
 article.action:hover{background:-moz-linear-gradient(bottom, rgba(252, 203, 0, 0.8), rgba(255, 237, 0, 0.8));background:-webkit-linear-gradient(bottom, rgba(252, 203, 0, 0.8), rgba(255, 237, 0, 0.8));background:-webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(252, 203, 0, 0.8)), color-stop(100%, rgba(255, 237, 0, 0.8)));background:-o-linear-gradient(bottom, rgba(252, 203, 0, 0.8), rgba(255, 237, 0, 0.8));background:linear-gradient(bottom, rgba(252, 203, 0, 0.8), rgba(255, 237, 0, 0.8));}
@@ -268,11 +268,15 @@ ul.pageNav{background-color:rgba(0,0,0,0.83);}
   margin: 40px 10px
 }
 }
-@media only screen and (min-width:480px) and (max-width:767px){body{background:#000 url(../../images/defcon-main/dcsite-bg-768.jpg) center top no-repeat;}
+@media only screen and (min-width:480px) and (max-width:767px) {
+	body {
+		background:#000 url(../images/banner.jpg) center top no-repeat; 
+    background-size: 750px 330px;
+	}
 body.ctfcfo{background:#000 url(../../images/defcon-main/architect-header-768.jpg) center top no-repeat;}
 body.ctf{background:#000 url(../../images/defcon-26/ctfpage-768.jpg) center top no-repeat;}
 body.policy{background:#000 url(../../images/defcon-main/dc-policy-header-768.jpg) center top no-repeat;}
-.header{height:100px}
+.header{height:150px}
 .nav{max-width:450px;}
 aside.leftSideBar article{display:none !important;}
 .leftSideBar h3{text-align:center;}

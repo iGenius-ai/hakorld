@@ -14,6 +14,7 @@
   $skill_level = "";
   $experience = "";
   $course_details = "";
+  $system_req = "";
 
   if (isset($_GET['id'])) {
     $course = selectOne($table, ['id' => $_GET['id']]);
@@ -27,6 +28,7 @@
     $skill_level = $course['skill_level'];
     $experience = $course['experience'];
     $course_details = $course['course_details'];
+    $system_req = $course['system_req'];
   }
 
   if (isset($_POST['addCourse'])) {
@@ -51,6 +53,7 @@
       $skill_level = $course['skill_level'];
       $experience = $course['experience'];
       $course_details = $_POST['course_details'];
+      $system_req = $_POST['system_req'];
     }
   }
 

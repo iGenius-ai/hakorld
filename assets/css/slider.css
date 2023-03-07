@@ -176,7 +176,7 @@
   text-align: center;
 }
 .carousel .carousel-inner .carousel-item {
-  min-height: 35em;
+  min-height: 30em;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -187,8 +187,8 @@
   background: #fff;
   background: rgba(255,255,255,.8);
   color: #000;
-  font-size: 1.3em;
-  margin-bottom: 20px;
+  font-size: 1.05em;
+  margin-bottom: 10px;
   min-height: 5em;
   padding: 5px 20px 0 20px;
   position: absolute;
@@ -219,6 +219,7 @@
 }
 .carousel .carousel-inner .carousel-item .carousel-caption p {
   line-height: 1.2em;
+  margin-left: 0;
 }
 .carousel .carousel-inner .carousel-item .carousel-caption p .more {
   display: inline-block;

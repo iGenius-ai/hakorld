@@ -139,6 +139,13 @@
 						</div>
 
 						<div class="form-group">
+							<label class="col-sm-3 control-label">Course Details *:</label>
+							<div class="col-sm-9">
+								<textarea name="system_req" cols="30" rows="5" placeholder="System requirements" class="form-control"><?php echo $system_req; ?></textarea>
+							</div>
+						</div>
+
+						<div class="form-group">
 							<div class="col-sm-offset-3 col-sm-9">
 								<button type="submit" name="addCourse" class="btn btn-large btn-primary">Add Course</button>
 							</div>

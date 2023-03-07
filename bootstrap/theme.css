@@ -92,14 +92,8 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, 
-main fieldset legend, 
-nav.main,
-.left-col-anchors, 
-.page-anchors,
-.price-box,
-.price-box-wrapper a .left, 
-#site-footer .links p strong {
+h1, h2, h3, h4, h5, main fieldset legend, nav.main, .left-col-anchors, 
+.page-anchors, .price-box, .price-box-wrapper a .left, #site-footer .links p strong {
   font-family: 'Play', sans-serif;
   text-transform: uppercase;
 }

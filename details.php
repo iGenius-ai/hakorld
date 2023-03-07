@@ -3,7 +3,6 @@
 	include(ROOT_PATH . "/app/database/db.php");
 	// include(ROOT_PATH . "/app/controllers/users.php"); 
 	include(ROOT_PATH . "/app/controllers/courses.php");
-	// include(ROOT_PATH . "/app/PaystackAPI/initialize.php");
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="/about/">&#8592; Back to courses</a>
+              <a class="nav-link js-scroll-trigger" href="tutorials">&#8592; Back to courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="/blogs/">Home</a>
@@ -67,9 +66,6 @@
                   <a href="#what-to-expect">What To Expect</a>
                 </div>
                 <div class="column">
-                  <a href="#prerequisites">Prerequisites</a>
-                </div>
-                <div class="column">
                   <a href="#system-requirements">System Requirements</a>
                 </div>
                 <div class="column">
@@ -86,21 +82,8 @@
               <h3 class="stickyContent" id="what-to-expect">What To Expect</h3>
 
               <p>
-                <?php echo $course['whattoexpect']; ?>
+                <?php echo $course['course_details']; ?>
               </p>
-
-              <h3 class="stickyContent" id="prerequisites">Pre-Requisites</h3>
-
-              <p>
-                The course is highly practical in nature and involves a lot of programming in C/C++, reverse engineering in windbg/x64dbg. Its important to have a good grasp of the below fundamentals before approaching the course.
-              </p>
-              <ul>
-                <li>Basic Understanding of operating system architecture</li>
-                <li>Basic Understanding of the Windows Active Directory environment</li>
-                <li>Fundamental knowledge of programming with C/C++</li>
-                <li>Familiarity with programming concepts </li>
-                <li>Strong will to learn and creative mindset.</li>
-              </ul>
 
               <h3 class="stickyContent" id="system-requirements">System Requirements</h3>
 
@@ -148,7 +131,7 @@
 
                   <form method="post" action="app/PaystackAPI/initialize.php">
                     <input type="hidden" name="amount" value="<?php echo $course['course_price'] * 100; ?>">
-                    <input type="hidden" name="email" value="<?php echo $_SESSION['email']; ?>"> 
+                    <input type="hidden" name="email" value="<?php echo $_SESSION['email']; ?>">
                     <button type="submit" class="btn btn-sm pay">Pay with Paystack</button>
                   </form>
                 </div>
@@ -183,3 +166,7 @@
 
   </body>
 </html>
+
+<!-- Requirements -->
+<!-- Details -->
+<!-- Cost -->
